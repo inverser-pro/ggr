@@ -1,5 +1,138 @@
+:root{
+  --main-font-color: #464646;
+  --second-font-color: #FF7099; /* also used in OTHER */
+  --main-btnBg-color: #FF0B85;/* also used in OTHER */
+  --second-btnBg-color: #fff;/* also used in OTHER */
+  --txt-btn-color: var(--second-btnBg-color);
+  --txt-color-gray: #9B9B9B;
+  --txt-color-gray2: #9B9B9B;
+  --color-for-bg-grad: #F89BC9;
+  --fea-nav-clr:var(--main-btnBg-color);
+  --head-color:var(--second-btnBg-color);
+}
+
+@font-face {
+  font-family: 'Montserrat Black';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/Montserrat-Black.woff2) format('woff2'),url(/fonts/Montserrat-Black.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/Montserrat-Regular.woff2) format('woff2'),url(/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+/*reset css*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+/* body {
+line-height: 1;
+} */
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* \ reset css*/
+
 body{
     margin: 0;
     padding: 0;
 }
 
+h1{
+    font: bold 2.4rem/3rem 'Montserrat Black','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pr{position: relative}
+.pa{position: absolute}
+.pf{position: fixed}
+.w1{width: 100%}
+.mw1{min-width: 100%}
+.db{display: block}
+.br50{border-radius: 50%;}
+.br{border-radius: 4.36px;}
+.br2{border-radius: 1.86px;}
+.br3\.6{border-radius: 3.6px;}
+
+.fx{display: flex}
+.fw{flex-wrap: wrap}
+.jc{justify-content: center}
+.jfe{justify-content: flex-end}
+.ac{align-items: center}
+.fdc{flex-direction: column}
+.fsb{justify-content: space-between}
+.tc{text-align: center}
+.tl{text-align: left}
+.gap{gap:.2rem}
+.gap\.5{gap:.5rem}
+.gap\.8{gap:.8rem}
+.gap1{gap:1rem}
+.gap6{gap:6rem}
+.f11a{flex: 1 1 auto;}
+.z-1{z-index: -1;}
+.z1{z-index: 1;}
+.z2{z-index: 2;}
+.z3{z-index: 3;}
+.z4{z-index: 4;}
+.z5{z-index: 5;}
+
+.cp{cursor: pointer;}
+
+.btn{
+  color: var(--main-font-color);
+}
+
+.cf{color: var(--txt-btn-color)}
+.c0{color: #000}
+.cg{color: #858585}
+.cGray{color: var(--txt-color-gray)}
+.higGry{color: var(--txt-color-gray2)}
+.ovh{overflow: hidden;}
+
+/* 1920 */
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}

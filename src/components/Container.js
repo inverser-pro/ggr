@@ -13,8 +13,8 @@ const Container = ({children}) =>{
             <Header
                 handleOverlayMenu={handleOverlayMenu}
             />
-            <div>{children}</div>
         </div>
+        <div>{children}</div>
         {/* <MobMenu
             menuOpen={menuOpen}
             callback={handleOverlayMenu}

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image";
 import BaseSeo from "../components/BasicSeo"
-import Container from '../components/Container.js'
+import Container from '../components/Container'
 
 const IndexPage = () => {
   return (
@@ -15,8 +15,39 @@ const IndexPage = () => {
           alt="beenve"
           loading="lazy"
           placeholder="blurred"
-          className="pr"
+          className="pa z-1 MPimg"
         />
+        <div className="MPS fx fdc ac jc">
+          <div className="pr">
+            <h1>CAR DETAILING</h1>
+            <span className="pa fx fdc tc cf lh2">
+              <strong>СОЗДАДИМ ИЗ ВАШЕГО АВТО</strong>
+              <strong>НАСТОЯЩИЙ ШЕДЕВР</strong>
+            </span>
+          </div>
+          <button className="btn-go">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+        <div className="pr MP3Bl">
+          <div className="pa MP3BlS"></div>
+          <div className="pa MP3BlS"></div>
+          <div className="container fx fsb MP3BlD">
+            <div className="fx ac fdc gap2 tc lh2">
+              <h3>АДРЕС:</h3>
+              <span>119200, Москва, Смоленская-Сенная площадь, 32/34</span>
+            </div>
+            <div className="fx ac fdc gap2 tc lh2">
+              <h3>ТЕЛЕФОН:</h3>
+              <span><a href="tel:+7-499-244-16-06">+7 (499) 244-16-06</a></span>
+              <span><a href="tel:+7-499-244-16-06">+7 (499) 244-16-06</a></span>
+            </div>
+            <div className="fx ac fdc gap2 tc lh2">
+              <h3>ГРАФИК:</h3>
+              <span>ПН-ПТ : 10:00 - 20:00</span>
+              <span>СБ-ВС : 10:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+        <div className="MPSpace"></div>
       </Container>
     </>
   )

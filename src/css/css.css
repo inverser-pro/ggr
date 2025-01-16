@@ -79,10 +79,15 @@ border-spacing: 0;
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat';
+    background-color: #131313;
+    color:#fff;
+    --red:#D73037;
 }
 
 h1{
     font: bold 2.4rem/3rem 'Montserrat Black','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
 }
 
 .pr{position: relative}
@@ -92,9 +97,13 @@ h1{
 .mw1{min-width: 100%}
 .db{display: block}
 .br50{border-radius: 50%;}
-.br{border-radius: 4.36px;}
-.br2{border-radius: 1.86px;}
-.br3\.6{border-radius: 3.6px;}
+.br,.btn{border-radius: 6px;}
+.br2{border-radius: 2px;}
+
+strong,.fwb{
+  font-weight: bold;
+  font-family: 'Montserrat Black';
+}
 
 .fx{display: flex}
 .fw{flex-wrap: wrap}
@@ -109,6 +118,7 @@ h1{
 .gap\.5{gap:.5rem}
 .gap\.8{gap:.8rem}
 .gap1{gap:1rem}
+.gap2{gap:2rem}
 .gap6{gap:6rem}
 .f11a{flex: 1 1 auto;}
 .z-1{z-index: -1;}
@@ -118,7 +128,9 @@ h1{
 .z4{z-index: 4;}
 .z5{z-index: 5;}
 
-.cp{cursor: pointer;}
+.cp,button{cursor: pointer;}
+.lh{line-height: 1;}
+.lh2{line-height: 2;}
 
 .btn{
   color: var(--main-font-color);
@@ -135,4 +147,93 @@ h1{
 .container{
     max-width: 1110px;
     margin: 0 auto;
+}
+
+.hTop{
+  top:20px;
+}
+
+.mobMenuDiv li a{
+  white-space: nowrap;
+}
+
+/*JFT*/
+.MPSpace{
+  min-height: 150vh;
+  /* background-color: #ccc; */
+}
+/*\JFT*/
+
+a{color:#fff;border:0;text-decoration: none;}
+
+.MPimg{
+  inset:0;
+  &:after{
+    content:'';
+    position: absolute;
+    inset:0;
+    background-image: linear-gradient(0, #131313, transparent);
+  }
+}
+
+button{
+  background-color: unset;
+  border: 0;
+}
+.btn{
+  background-color: #fff;
+  color:#000
+}
+
+.MPS{
+  min-height: 110vh;
+  h1{
+    font-size: min(80vh,7rem);
+    color:var(--red)
+  }
+  span{
+    left:50%;
+    width: 100%;
+    transform: translate(-50%,20.2vh);
+    font-size: max(3vh,3rem);
+  }
+}
+
+.MP3Bl{
+  align-items: stretch;
+  div:not(.MP3BlD,.MP3BlS){
+    flex: 1;
+    padding: 1.2rem 1rem;
+    border: 1px solid #888;
+    border-top:0;
+    border-bottom:0;
+    font-size: 1.2rem;
+    font-family: 'Montserrat Black';
+    &:first-of-type,
+    &:last-of-type{
+      border:none;
+    }
+  }
+  h3{
+    color:var(--red);
+    font-size: 1.4rem;
+  }
+  .MP3BlS{
+    inset: 0 0 auto 0;
+    height:1px;
+    background-color: #888;
+  }
+  .MP3BlS:nth-of-type(2){
+    inset: auto 0 0 0;
+  }
+}
+
+.btn-go{
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 1rem 1.6rem;
+  background-color: var(--red);
+  color:#fff;
+  border-radius: .3rem;
+  margin: 3rem auto 1rem auto;
 }

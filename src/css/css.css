@@ -1,239 +1,1022 @@
-:root{
-  --main-font-color: #464646;
-  --second-font-color: #FF7099; /* also used in OTHER */
-  --main-btnBg-color: #FF0B85;/* also used in OTHER */
-  --second-btnBg-color: #fff;/* also used in OTHER */
-  --txt-btn-color: var(--second-btnBg-color);
-  --txt-color-gray: #9B9B9B;
-  --txt-color-gray2: #9B9B9B;
-  --color-for-bg-grad: #F89BC9;
-  --fea-nav-clr:var(--main-btnBg-color);
-  --head-color:var(--second-btnBg-color);
+@font-face {
+    font-family: 'Reforma Grotesk Bold';
+    src: local('Reforma Grotesk Bold'), local('Reforma-Grotesk-Bold'),
+    url('/fonts/ReformaGroteskBold.woff2') format('woff2'),
+    url('/fonts/ReformaGroteskBold.woff') format('woff'),
+    url('/fonts/ReformaGroteskBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat Black';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(/fonts/Montserrat-Black.woff2) format('woff2'),url(/fonts/Montserrat-Black.ttf) format('truetype');
+    font-family: 'Reforma Grotesk Demi';
+    src: local('Reforma Grotesk Demi'), local('Reforma-Grotesk-Demi'),
+    url('/fonts/ReformaGroteskDemi.woff2') format('woff2'),
+    url('/fonts/ReformaGroteskDemi.woff') format('woff'),
+    url('/fonts/ReformaGroteskDemi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(/fonts/Montserrat-Regular.woff2) format('woff2'),url(/fonts/Montserrat-Regular.ttf) format('truetype');
+    font-family: 'Reforma Grotesk Medium';
+    src: local('Reforma Grotesk Medium'), local('Reforma-Grotesk-Medium'),
+    url('/fonts/Reformagroteskmediumc.woff2') format('woff2'),
+    url('/fonts/Reformagroteskmediumc.woff') format('woff'),
+    url('/fonts/Reformagroteskmediumc.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
-/*reset css*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+:root {
+    --accent: #DB3138;
+    --black-bg: #141414;
+    --color-hover: #d3d3d3;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-display: block;
-}
-/* body {
-line-height: 1;
-} */
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
-/* \ reset css*/
 
-body{
+html {
+    font-family: "Reforma Grotesk Medium", sans-serif;
+    font-weight: 600;
+    color: white;
+    line-height: 28.8px;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat';
-    background-color: #131313;
-    color:#fff;
-    --red:#D73037;
 }
 
-h1{
-    font: bold 2.4rem/3rem 'Montserrat Black','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1;
+a {
+    text-decoration: none;
 }
 
-.pr{position: relative}
-.pa{position: absolute}
-.pf{position: fixed}
-.w1{width: 100%}
-.mw1{min-width: 100%}
-.db{display: block}
-.br50{border-radius: 50%;}
-.br,.btn{border-radius: 6px;}
-.br2{border-radius: 2px;}
-
-strong,.fwb{
-  font-weight: bold;
-  font-family: 'Montserrat Black';
+input:focus,
+textarea:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    background-color: transparent;
+    color: #898989;
+    -webkit-text-fill-color: #898989;
+    -webkit-box-shadow: 0 0 0 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s
 }
 
-.fx{display: flex}
-.fw{flex-wrap: wrap}
-.jc{justify-content: center}
-.jfe{justify-content: flex-end}
-.ac{align-items: center}
-.fdc{flex-direction: column}
-.fsb{justify-content: space-between}
-.tc{text-align: center}
-.tl{text-align: left}
-.gap{gap:.2rem}
-.gap\.5{gap:.5rem}
-.gap\.8{gap:.8rem}
-.gap1{gap:1rem}
-.gap2{gap:2rem}
-.gap6{gap:6rem}
-.f11a{flex: 1 1 auto;}
-.z-1{z-index: -1;}
-.z1{z-index: 1;}
-.z2{z-index: 2;}
-.z3{z-index: 3;}
-.z4{z-index: 4;}
-.z5{z-index: 5;}
-
-.cp,button{cursor: pointer;}
-.lh{line-height: 1;}
-.lh2{line-height: 2;}
-
-.btn{
-  color: var(--main-font-color);
+input::placeholder, textarea::placeholder {
+    text-transform: uppercase;
 }
 
-.cf{color: var(--txt-btn-color)}
-.c0{color: #000}
-.cg{color: #858585}
-.cGray{color: var(--txt-color-gray)}
-.higGry{color: var(--txt-color-gray2)}
-.ovh{overflow: hidden;}
+input, textarea {
+    width: 305px;
+    margin-bottom: 25px;
+    padding: 12px 5px 12px 25px;
+    font-family: "Reforma Grotesk Demi", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    border: 1px solid #898989;
+    background-color: transparent;
+    color: #898989;
+}
 
-/* 1920 */
-.container{
-    max-width: 1110px;
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+    font-family: inherit;
+    font-weight: inherit;
+    color: white;
+    line-height: inherit;
+    background-color: var(--black-bg);
+}
+
+.our-works div.hr-line,
+.advantages-aside div.hr-line,
+.services div.hr-line {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 40px;
+    margin-bottom: 180px;
+}
+
+.wrapper {
+    max-width: 1301px;
+    padding: 0 5px;
     margin: 0 auto;
 }
 
-.hTop{
-  top:20px;
-}
-
-.mobMenuDiv li a{
-  white-space: nowrap;
-}
-
-/*JFT*/
-.MPSpace{
-  min-height: 150vh;
-  /* background-color: #ccc; */
-}
-/*\JFT*/
-
-a{color:#fff;border:0;text-decoration: none;}
-
-.MPimg{
-  inset:0;
-  &:after{
-    content:'';
-    position: absolute;
-    inset:0;
-    background-image: linear-gradient(0, #131313, transparent);
-  }
-}
-
-button{
-  background-color: unset;
-  border: 0;
-}
-.btn{
-  background-color: #fff;
-  color:#000
-}
-
-.MPS{
-  min-height: 110vh;
-  h1{
-    font-size: min(80vh,7rem);
-    color:var(--red)
-  }
-  span{
-    left:50%;
+.nav {
+    margin-bottom: 75px;
     width: 100%;
-    transform: translate(-50%,20.2vh);
-    font-size: max(3vh,3rem);
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.MP3Bl{
-  align-items: stretch;
-  div:not(.MP3BlD,.MP3BlS){
-    flex: 1;
-    padding: 1.2rem 1rem;
-    border: 1px solid #888;
-    border-top:0;
-    border-bottom:0;
-    font-size: 1.2rem;
-    font-family: 'Montserrat Black';
-    &:first-of-type,
-    &:last-of-type{
-      border:none;
+.nav__list {
+    min-width: 521px;
+    height: 29px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav__link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: white;
+}
+
+.nav__link:hover, .nav__link:active, .nav__link:focus {
+    color: var(--color-hover);
+}
+
+.rectangle {
+    width: 50px;
+    height: 25px;
+    display: grid;
+    justify-items: end;
+    align-content: space-between;
+    background-color: transparent;
+
+}
+
+.rectangle__items {
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.rectangle div:nth-of-type(2) {
+    display: grid;
+    justify-content: start;
+    width: 50px;
+}
+
+
+.header-info {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 40px;
+}
+
+.header-info__tittle {
+    font-family: 'Reforma Grotesk Bold', serif;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 188px;
+    color: var(--accent);
+}
+
+.hr-line {
+    display: flex;
+    gap: 30px;
+}
+
+.hr-line__items {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background-color: var(--accent);
+}
+
+.header-info__description p {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.header-info__description {
+    width: 437px;
+    text-align: center;
+}
+
+.header-info__btn {
+    margin-bottom: 100px;
+    text-align: right;
+    min-width: 145px;
+    height: 60px;
+    background: linear-gradient(to right, var(--accent) 70%, transparent 30%);
+}
+
+.header-info__link {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: white;
+}
+
+.header-info__link:hover, .header-info__link:focus, .header-info__link:active {
+    color: var(--color-hover);
+}
+
+.header-bottom {
+    width: 100%;
+    height: 215px;
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.header-bottom__items {
+    width: 33.3333%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #898989;
+}
+
+.header-bottom div:last-child {
+    border-right: none;
+}
+
+.header-bottom div:first-child {
+    border-left: none;
+}
+
+.header-bottom__elements {
+    max-width: 250px;
+
+}
+
+.header-bottom__title {
+    margin-bottom: 20px;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.header-bottom__body a,
+.header-bottom__body a:hover,
+.header-bottom__body a:focus,
+.header-bottom__body a:active {
+    color: var(--accent);
+}
+
+.header-bottom__body {
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    text-align: center;
+}
+
+/* End Header*/
+
+/*MAIN*/
+
+.main {
+}
+
+.progress {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 180px;
+    gap: 10px;
+}
+
+.progress__left {
+    max-width: 640px;
+    margin-bottom: 20px;
+}
+
+.progress-items {
+    display: flex;
+
+}
+
+
+.progress__title {
+    margin-bottom: 40px;
+    padding-right: 10px;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+
+/* .progress__title.element-animation {
+
+    opacity: 0;
+    transition: 2s;
+}
+ */
+.progress__title.element-animation.element-show {
+    opacity: 1;
+}
+
+
+.progress__descriptions {
+    width: 530px;
+    margin-top: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+/* .progress__center.element-animation,
+.progress__right.element-animation {
+    opacity: 0;
+    transition: 1.5s;
+}
+ */
+/* .progress__descriptions.element-animation,
+.progress__left div.hr-line.element-animation {
+    opacity: 0;
+    transition: 1.5s;
+} */
+
+
+.progress__descriptions.element-animation.element-show {
+    opacity: 1;
+    transition-delay: 0.35s;
+}
+
+
+.progress__left div.hr-line.element-animation.element-show {
+    opacity: 1;
+}
+
+
+.progress__center.element-animation.element-show {
+    opacity: 1;
+}
+
+.progress__right.element-animation.element-show {
+    opacity: 1;
+    transition-delay: 0.35s;
+}
+
+/* .progress__center {
+} */
+
+.progress-element {
+    display: grid;
+    align-content: center;
+    width: 320px;
+    min-height: 180px;
+    border: 1px solid #898989;
+}
+
+.progress-element__title span {
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--accent);
+}
+
+.progress-element__title {
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--accent);
+}
+
+.progress-element__body {
+    padding: 5px;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.progress__right {
+    margin-top: 40px;
+}
+
+/*SLIDER*/
+.slider {
+    overflow: hidden;
+    min-height: 450px;
+    margin-bottom: 180px;
+}
+
+.slider div.wrapper {
+    position: relative;
+}
+
+.slider-btns {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 1450px;
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+.slide {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    align-content: end;
+    height: 350px;
+    width: 420px;
+    background: 415px 350px;
+    background: no-repeat;
+}
+
+.btn-left, .btn-right {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 3px solid var(--accent);
+    transform: rotate(45deg);
+}
+
+.slider div.btn-left, .slider div.btn-right {
+    position: absolute;
+}
+
+.btn-left__arrow, .btn-right__arrow {
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+}
+
+.btn-left__arrow {
+    border-right: none;
+    border-top: none;
+}
+
+.btn-right {
+    right: 12px;
+}
+
+.btn-left {
+    left: 12px;
+}
+
+.btn-right__arrow {
+    border-left: none;
+    border-bottom: none;
+}
+
+.slide__content {
+    position: relative;
+    top: 50%;
+    width: 365px;
+    height: 70px;
+    background-color: var(--accent);
+}
+
+.slide__content p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 245px;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*END SLIDER*/
+
+/*advantages*/
+
+.advantages {
+    margin-bottom: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 130px;
+}
+
+.advantages-aside {
+    width: 525px;
+    display: grid;
+    justify-items: center;
+}
+
+
+.advantages__items {
+    position: relative;
+    width: 100%;
+}
+
+.advantages-title__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.advantages-title__ico {
+    display: grid;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+
+}
+
+.advantages__items-title {
+    margin-left: 30px;
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.advantages__items-body p {
+    font-family: 'Reforma Grotesk Medium';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+}
+
+.advantages-slider {
+    display: grid;
+}
+
+.advantages-slider__content {
+    padding-right: 12px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.advantages-slider__img-container {
+}
+
+.advantages-slider__img {
+}
+
+
+.advantages-slider__descriptions {
+    width: 420px;
+}
+
+.advantages-slider__descriptions p {
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*End advantages*/
+
+/*SERVICES*/
+
+.services {
+    margin-bottom: 180px;
+    display: grid;
+    justify-items: center;
+    font-family: Reforma Grotesk Demi;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.services__title {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+}
+
+.services__links {
+    margin-bottom: 80px;
+    display: flex;
+    justify-items: center;
+    gap: 60px;
+}
+
+.services__link {
+    width: 180px;
+    height: 75px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.services__link a {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.services__link a:hover, .services__link a:focus, .services__link a:active {
+    color: var(--color-hover);
+}
+
+.link-accent {
+    background-color: var(--accent);
+}
+
+.services__layouts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.services__layout p {
+    text-align: center;
+}
+
+.services__layout {
+    flex-grow: 1;
+    height: 430px;
+    padding: 0 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #898989;
+    /* transform: rotateY(90deg);
+    transition: all 1.5s; */
+}
+
+/* .services__layout.element-animation {
+    opacity: 0;
+} */
+
+.services__layout.element-animation.element-show {
+    opacity: 1;
+}
+/* 
+.services__layout.element-animation.element-show:nth-child(1) {
+    transition-delay: 0s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(2) {
+    transition-delay: 0.20s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(3) {
+    transition-delay: 0.4s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(4) {
+    transition-delay: 0.6s;
+    transform: rotateY(0deg);
+} */
+
+.services__layout-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+}
+
+.services__layout-description {
+    max-width: 230px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+
+.services__layout-btn a {
+    color: white;
+}
+
+.services__layout-btn {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 95px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to right, var(--accent) 50%, transparent 50%);
+}
+
+/*END SERVICES*/
+
+/*OUR WORKS*/
+
+.our-works {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 5px;
+}
+
+
+.our-works__title {
+    font-family: 'Reforma Grotesk Demi';
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+
+}
+
+.our-works__item img {
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.our-works__items {
+    margin: 0 auto 180px auto;
+    max-width: 1920px;
+    min-height: 560px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+}
+
+.our-works__item a {
+    display: grid;
+    overflow: hidden;
+}
+
+.our-works__item img:hover {
+    transition: 0.8s;
+    transform: scale(1.1);
+}
+
+/*END OUR WORKS*/
+
+/*FORM*/
+.group-form fieldset {
+    width: 640px;
+    border: 0;
+}
+
+
+.group-form div.hr-line {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.group-form label:first-of-type {
+    margin-right: 25px;
+}
+
+.group-form {
+    margin-bottom: 100px;
+    font-family: "Reforma Grotesk Demi", sans-serif;
+    display: grid;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.group-form__title {
+    margin: 0 auto;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+}
+
+
+.input-wrapper textarea {
+    margin: 0;
+    width: 525px;
+    min-height: 150px;
+    max-height: 200px;
+    resize: vertical;
+    padding: 10px 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.social__wrapper {
+    display: grid;
+
+}
+
+.social__item a:hover, .social__item a:focus, .social__item a:active {
+    border-color: var(--accent);
+}
+
+.social__item a {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #898989;
+}
+
+.footer-form {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: flex-end;*/
+}
+
+
+.footer-form__contacts,
+.footer-form__btn button {
+    font-family: "Reforma Grotesk Demi", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+}
+
+.footer-form__btn {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to right, var(--accent) 50%, transparent 50%);
+}
+
+.footer-form__btn button {
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: transparent;
+
+}
+
+.footer-form__contacts span:first-of-type {
+    margin-right: 10px;
+}
+
+.footer-form__contacts {
+    display: grid;
+    justify-items: end;
+    grid-template-areas:
+            'a1 a1'
+}
+
+.location {
+    display: flex;
+    grid-area: a1;
+}
+
+.footer-form__contacts-info a {
+    color: white;
+}
+
+/*END FORM*/
+/*END MAIN*/
+/*FOOTER*/
+footer {
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #898989;
+}
+
+.footer {
+    padding: 5px;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright {
+    font-family: "Reforma Grotesk Demi", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+
+}
+
+.footer__nav {
+}
+
+.nav__list {
+}
+
+.nav__item {
+}
+
+.nav__link {
+}
+
+/*END FOOTER*/
+
+/*media*/
+
+@media screen and (max-width: 1460px) {
+    #slides div.slide:nth-child(1) {
+        display: none;
     }
-  }
-  h3{
-    color:var(--red);
-    font-size: 1.4rem;
-  }
-  .MP3BlS{
-    inset: 0 0 auto 0;
-    height:1px;
-    background-color: #888;
-  }
-  .MP3BlS:nth-of-type(2){
-    inset: auto 0 0 0;
-  }
+
+    .btn-left {
+        left: 200px;
+    }
+
+    .btn-right {
+        right: 200px;
+    }
 }
 
-.btn-go{
-  font-size: 1.6rem;
-  line-height: 1.2;
-  padding: 1rem 1.6rem;
-  background-color: var(--red);
-  color:#fff;
-  border-radius: .3rem;
-  margin: 3rem auto 1rem auto;
+@media (max-width: 1100px) {
+    #slides div.slide:nth-child(2) {
+        display: none;
+    }
+
+    .progress__left div.hr-line {
+        justify-content: center;
+    }
+
+    .progress__title {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .progress-element {
+        width: 180px;
+    }
+
+    .progress__descriptions {
+        padding: 5px;
+        width: 370px;
+    }
+
+    .btn-left {
+        left: 440px;
+    }
+
+    .btn-right {
+        right: 440px;
+    }
 }
+

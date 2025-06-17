@@ -6,7 +6,7 @@ import Container from '../components/Container'
 const IndexPage = () => {
   return (
       <Container>
-        <header className="ovh header">
+        <header className="ovh header s1">
           <div className="wrapper">
               <nav className="nav">
                   <ul className="nav__list">
@@ -31,7 +31,7 @@ const IndexPage = () => {
                       <div className="rectangle__items"></div>
                   </div>
               </nav>
-              <div className="header-info">
+              <div className="header-info MPS">
                   <h1 className="header-info__tittle">CAR MUSIC</h1>
                   <div className="hr-line">
                       <div className="hr-line__items"></div>
@@ -46,6 +46,15 @@ const IndexPage = () => {
                       <a className="header-info__link" href="#our-services">Наши услуги</a>
                   </div>
               </div>
+              <StaticImage
+                src="../images/mp/MP_s1_bg.jpg"
+                width={1920}
+                quality={80}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
           </div>
           <div className="header-bottom">
               <div className="header-bottom__items">

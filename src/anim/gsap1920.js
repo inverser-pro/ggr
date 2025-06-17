@@ -5,18 +5,16 @@ import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 const anim1920 = (d,s,a)=>{
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(MotionPathPlugin);  /* register the MotionPath plugin */
-    console.log(document.querySelector('.MP3Bl'));
-    gsap.to('.MPS',{
-        x:'-50%',
-        opacity:0,
+    gsap.from('.progress__left',{
+        x:      '-50%',
+        opacity: 0,
         scrollTrigger:{
-            trigger:'.MP3Bl',
-            start: "-20% 90%", // Начало анимации, когда верхняя часть .MP3Bl достигает центра экрана
-            end: "50% 50%",   // Конец анимации, когда нижняя часть .MP3Bl достигает верхней части экрана
-            scrub: 1, // Плавная анимация при прокрутке
-            // scrub: 1,
+            trigger:'.progress__center',
+            start: "20% 100%", // Начало анимации, когда верхняя часть .MP3Bl достигает центра экрана
+            end: "40% 70%",   // Конец анимации, когда нижняя часть .MP3Bl достигает верхней части экрана
+            scrub: true, // Плавная анимация при прокрутке
             // pin:true,
-            markers: true, //JFT
+            // markers: true,
             onEnter:()=>{
                 console.log('onEnter');
             },
